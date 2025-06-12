@@ -1,19 +1,30 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "path: %s", r.URL.Path)
-}
-
 func main() {
-	port := ":8080"
+	var (
+		port  = ":8080"
+		paths = make(PathHandler)
+	)
 
-	http.HandleFunc("/", handler)
+	f, err := os.Open("gophers.json")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer f.Close()
+
+	if err = json.NewDecoder(f).Decode(&paths); err != nil {
+		log.Fatal(err)
+	}
+
+	http.Handle("/", paths)
 
 	fmt.Printf("Starting a server on %s\n", port)
 	log.Fatal(http.ListenAndServe(port, nil))
