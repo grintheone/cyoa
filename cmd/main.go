@@ -26,6 +26,9 @@ func main() {
 
 	http.Handle("/", paths)
 
+	fs := http.FileServer(http.Dir("./ui/static/"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
+
 	fmt.Printf("Starting a server on %s\n", port)
 	log.Fatal(http.ListenAndServe(port, nil))
 }

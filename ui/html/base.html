@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Choose your own adventure</title>
+    <base href="/">
+    <!-- Link to the CSS stylesheet and favicon -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="/static/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Also link to some fonts hosted by Google -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700"
+    />
+  </head>
+  <body>
+    <main>
+        <h1>{{ .Title }}</h1>
+        {{ range $val := .Description }}
+            <p>{{ $val }}</p>
+        {{ end }}
+        {{ if not (isEmpty .Options) }}
+            <ul>
+                {{ range $option := .Options }}
+                    <li><a href="{{$option.Arc}}">{{$option.Text}}</a></li>
+                {{ end }}
+            </ul>
+        {{ end }}
+    </main>
+  </body>
+</html>

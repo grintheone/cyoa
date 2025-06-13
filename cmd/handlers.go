@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 )
 
@@ -22,7 +21,11 @@ type Option struct {
 }
 
 func (s Story) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "hello from the handler %#v", s)
+	err := renderTemplate(w, s)
+	if err != nil {
+		http.Error(w, "Something went wrong", http.StatusInternalServerError)
+		return
+	}
 }
 
 func (ph PathHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
