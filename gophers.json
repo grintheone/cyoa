@@ -14,6 +14,10 @@
             {
                 "text": "Gee, those bandits sound pretty real to me. Let's play it safe and try our luck in Denver.",
                 "arc": "denver"
+            },
+            {
+                "text": "Why not try something completely different? Let's book a flight to Tokyo!",
+                "arc": "tokyo"
             }
         ]
     },
@@ -34,6 +38,10 @@
             {
                 "text": "Maybe people just dress funny in the big city. Grab a a seat and see what happens.",
                 "arc": "debate"
+            },
+            {
+                "text": "This seems sketchy. Let's sneak out and explore the city on our own.",
+                "arc": "nyc-explore"
             }
         ]
     },
@@ -98,6 +106,165 @@
         "options": [
             {
                 "text": "Pack your bags and head to bed. We have a long flight in the morning.",
+                "arc": "home"
+            },
+            {
+                "text": "Let's make a detour to the nearby hot springs before heading home.",
+                "arc": "hot-springs"
+            }
+        ]
+    },
+    "hot-springs": {
+        "title": "Relaxing at the Hot Springs",
+        "story": [
+            "You and your gopher buddy decide to unwind at the famous hot springs near Denver. The warm water is soothing, and the little gopher even tries floating on his back, which is adorable.",
+            "As you relax, you overhear a group of travelers talking about a hidden cave nearby, rumored to be filled with ancient gopher artifacts. Your buddy's ears perk up at the mention of it."
+        ],
+        "options": [
+            {
+                "text": "Investigate the cave. Ancient gopher artifacts sound too intriguing to pass up!",
+                "arc": "hidden-cave"
+            },
+            {
+                "text": "Stay and enjoy the hot springs. Adventures are exhausting!",
+                "arc": "home"
+            }
+        ]
+    },
+    "hidden-cave": {
+        "title": "The Hidden Cave",
+        "story": [
+            "You follow the travelers' directions and find the entrance to the cave, hidden behind a waterfall. Inside, the walls are covered in carvings of gophers in various heroic poses.",
+            "At the back of the cave, you discover a small chest. Your gopher buddy excitedly opens it to reveal a shiny golden acorn—the legendary treasure of the ancient gopher kings!",
+            "As you leave the cave, your buddy clutches the acorn proudly. \"This was the best adventure ever,\" he says."
+        ],
+        "options": [
+            {
+                "text": "Head home with your newfound treasure.",
+                "arc": "home"
+            }
+        ]
+    },
+    "tokyo": {
+        "title": "Tokyo Adventures",
+        "story": [
+            "You and your gopher buddy arrive in Tokyo, where the neon lights and bustling streets are overwhelming but exciting. Your buddy is particularly fascinated by the vending machines that sell everything from hot coffee to tiny toys.",
+            "While exploring Akihabara, you stumble upon a Go-themed café. The staff are dressed as gophers, and the menu is full of puns like \"Gopher Latte\" and \"Digging Deep Dumplings.\" Your buddy is in heaven."
+        ],
+        "options": [
+            {
+                "text": "Spend the day at the café, soaking in the gopher-themed fun.",
+                "arc": "go-cafe"
+            },
+            {
+                "text": "Visit the famous Shibuya Crossing and see the city from above.",
+                "arc": "shibuya"
+            }
+        ]
+    },
+    "go-cafe": {
+        "title": "Gopher Café Delights",
+        "story": [
+            "You spend hours at the café, trying every gopher-themed dish. The \"Tunnel Burger\" is a hit, and your buddy even gets a tiny chef’s hat to wear.",
+            "As you leave, the owner hands you a flyer for a gopher cosplay contest happening the next day. Your buddy’s eyes light up with excitement."
+        ],
+        "options": [
+            {
+                "text": "Enter the contest! How hard can gopher cosplay be?",
+                "arc": "cosplay-contest"
+            },
+            {
+                "text": "Politely decline and continue exploring the city.",
+                "arc": "shibuya"
+            }
+        ]
+    },
+    "cosplay-contest": {
+        "title": "Gopher Cosplay Extravaganza",
+        "story": [
+            "You and your buddy work all night crafting the perfect gopher costume. Using cardboard, fabric, and a lot of glue, you transform into the most convincing gopher duo the contest has ever seen.",
+            "To your surprise, you win first prize—a year’s supply of gourmet acorns! Your buddy is overjoyed, and you both celebrate with a victory dance on stage."
+        ],
+        "options": [
+            {
+                "text": "Head back to the hotel, triumphant and ready to plan your next adventure.",
+                "arc": "home"
+            }
+        ]
+    },
+    "shibuya": {
+        "title": "Shibuya Scramble",
+        "story": [
+            "You brave the famous Shibuya Crossing, holding your gopher buddy tightly so he doesn’t get lost in the crowd. From the observation deck, the city stretches out like a glittering ocean.",
+            "As the sun sets, you spot a poster for a pop-up gopher museum. Your buddy tugs at your sleeve, eyes pleading."
+        ],
+        "options": [
+            {
+                "text": "Visit the gopher museum. How often do you get to see a museum dedicated to gophers?",
+                "arc": "gopher-museum"
+            },
+            {
+                "text": "Call it a day and head back to the hotel.",
+                "arc": "home"
+            }
+        ]
+    },
+    "gopher-museum": {
+        "title": "The Gopher Museum",
+        "story": [
+            "The museum is a whimsical place filled with gopher history, art, and even interactive exhibits. Your buddy is thrilled to see a life-sized diorama of the \"Great Gopher Empire.\"",
+            "At the gift shop, you buy a commemorative pin and a guidebook titled \"Gophers of the World.\" Your buddy insists on wearing the pin for the rest of the trip."
+        ],
+        "options": [
+            {
+                "text": "Return to the hotel, satisfied with your Tokyo adventures.",
+                "arc": "home"
+            }
+        ]
+    },
+    "nyc-explore": {
+        "title": "Exploring NYC",
+        "story": [
+            "You ditch the conference and decide to explore the city on your own. First stop: Central Park, where your gopher buddy tries (and fails) to blend in with the local squirrels.",
+            "Next, you visit the Statue of Liberty. Your buddy is disappointed to learn that the statue isn’t actually made of gopher-friendly materials, but he enjoys the boat ride."
+        ],
+        "options": [
+            {
+                "text": "Visit Times Square and experience the heart of the city.",
+                "arc": "times-square"
+            },
+            {
+                "text": "Head back to the hotel and call it a day.",
+                "arc": "home"
+            }
+        ]
+    },
+    "times-square": {
+        "title": "Bright Lights, Big City",
+        "story": [
+            "Times Square is overwhelming, but your gopher buddy loves the giant screens and flashing lights. He even spots a gopher-themed advertisement for a new tech company.",
+            "As you wander, a street performer dressed as a gopher starts a crowd-funded \"Gopher Dance-Off.\" Your buddy is tempted to join."
+        ],
+        "options": [
+            {
+                "text": "Encourage your buddy to join the dance-off. How bad could it be?",
+                "arc": "dance-off"
+            },
+            {
+                "text": "Keep walking. You’ve had enough excitement for one day.",
+                "arc": "home"
+            }
+        ]
+    },
+    "dance-off": {
+        "title": "Gopher Dance-Off",
+        "story": [
+            "Your buddy jumps into the dance-off, surprising everyone with his slick moves. The crowd goes wild, and by the end, he’s crowned the \"King of Times Square.\"",
+            "The performer hands him a tiny crown and a coupon for a free meal at a nearby diner. You both leave feeling like celebrities."
+        ],
+        "options": [
+            {
+                "text": "Celebrate with a meal at the diner before heading back.",
                 "arc": "home"
             }
         ]
