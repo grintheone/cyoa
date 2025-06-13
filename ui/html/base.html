@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Choose your own adventure</title>
+    <title>Choose Your Own Adventure</title>
     <base href="/">
     <!-- Link to the CSS stylesheet and favicon -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
@@ -24,6 +24,7 @@
             <p>{{ $val }}</p>
         {{ end }}
         {{ if not (isEmpty .Options) }}
+            <div class="divider"></div>
             <ul>
                 {{ range $option := .Options }}
                     <li><a href="{{$option.Arc}}">{{$option.Text}}</a></li>
