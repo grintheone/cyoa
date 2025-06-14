@@ -8,6 +8,7 @@ import (
 	"slices"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/eiannone/keyboard"
 	"github.com/fatih/color"
@@ -40,7 +41,7 @@ func traverse(paths Paths, startPath Path) {
 
 	for _, ch := range start.Title {
 		title.Fprintf(os.Stdout, "%v", string(ch))
-		// time.Sleep(time.Millisecond * 40)
+		time.Sleep(time.Millisecond * 40)
 	}
 
 	fmt.Println()
@@ -49,7 +50,7 @@ func traverse(paths Paths, startPath Path) {
 	for _, pg := range start.Description {
 		for _, ch := range pg {
 			description.Fprintf(os.Stdout, "%v", string(ch))
-			// time.Sleep(time.Millisecond * 40)
+			time.Sleep(time.Millisecond * 40)
 		}
 		fmt.Println()
 		fmt.Println()
@@ -59,7 +60,7 @@ func traverse(paths Paths, startPath Path) {
 		option.Fprintf(os.Stdout, "Option %d: ", i+1)
 		for _, ch := range opt.Text {
 			option.Fprintf(os.Stdout, "%v", string(ch))
-			// time.Sleep(time.Millisecond * 40)
+			time.Sleep(time.Millisecond * 40)
 		}
 		fmt.Println()
 	}
