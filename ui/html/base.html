@@ -20,14 +20,14 @@
   <body>
     <main>
         <h1>{{ .Title }}</h1>
-        {{ range $val := .Description }}
+        {{ range $val := .Story }}
             <p>{{ $val }}</p>
         {{ end }}
         {{ if not (isEmpty .Options) }}
             <div class="divider"></div>
             <ul>
                 {{ range $option := .Options }}
-                    <li><a href="{{$option.Arc}}">{{$option.Text}}</a></li>
+                    <li><a href="{{$option.Chapter}}">{{$option.Text}}</a></li>
                 {{ end }}
             </ul>
         {{ else }}
